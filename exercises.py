@@ -1,13 +1,3 @@
-#Ejercicio 1: MCD
-
-#Ejercicio 2: MC
-
-
-#Ejercicio 3: 
-
-#Ejercicio 4
-
-#Ejercicio 5
 
 #Ejercicio 6 - 7 - 8
 
@@ -23,33 +13,44 @@ class Persona:
         return self.__nombre
     
     @nombre.setter
-    def nombre(self,nuevo_nombre):
-        self.__nombre = nuevo_nombre
+    def nombre(self,nuevoNombre):
+        self.__nombre = nuevoNombre
 
     @property
-    def apellido(self):
-        return self.__apellido
+    def edad(self):
+        return self.__edad
     
-    @apellido.setter
-    def nombre(self,nuevo_apellido):
-        self.__apellido = nuevo_apellido
+    @edad.setter
+    def edad(self, nuevaEdad):
+        if nuevaEdad > 18:
+            self.__edad = nuevaEdad
+        else:
+            print("Eres menor de edad")
 
     @property
     def dni(self):
         return self.__dni
 
     @dni.setter
-    def dni(self,nuevo_dni):
-        self.__dni = nuevo_dni
+    def dni(self,nuevoDni):
+        self.__dni = nuevoDni
+
+
+    def mostrar(self):
+        return( f"Nombre: {self.__nombre} Edad: {self.__edad} DNI: {self.__dni}")
+
+    def esMAyorDeEdad(self):
+        return self.__edad
     
     
     
 
 class Cuenta:
     def __init__(self, titular, cantidad):
-        super()
-        self.titular = titular
+        self.titular = (Persona)
         self.cantidad = cantidad
+
+
 
 class CuentaJoven:
     def __init__(self,bonificacion):
@@ -58,9 +59,10 @@ class CuentaJoven:
    # def titularValido(self):
    #     if self>18 & self < 25
    #         True
-   #         else False
+   #     else 
+   #        False
 
    # def retirarDinero(self):
    #     if titularValido(self)
-   #     True
+   #        True
 
